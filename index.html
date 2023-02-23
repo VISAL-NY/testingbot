@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         // function setThemeClass() {
         //     document.documentElement.className = Telegram.WebApp.colorScheme;
@@ -15,14 +15,55 @@
         // setThemeClass();
     </script>
     <style>
-        body{
+        body {
             color-scheme: var(--tg-color-scheme);
-            color: var(--tg-theme-text-color,rgb(214, 36, 36));
+            color: var(--tg-theme-text-color, rgb(214, 36, 36));
         }
     </style>
 </head>
+
 <body>
-    <div><h1>Hello World</h1></div>
-    <div><h2>Welcome</h2></div>
+    <div>
+        <h1>Hello World</h1>
+    </div>
+    <div>
+        <h2>Welcome</h2>
+    </div>
+
+    <script>
+        const TelegramBot = require('node-telegram-bot-api');
+
+        // Replace YOUR_BOT_TOKEN with your actual bot token
+        const bot = new TelegramBot('YOUR_BOT_TOKEN', { polling: true });
+
+        // Handle the /start command
+        bot.onText(/\/start/, (msg) => {
+            const chatId = msg.chat.id;
+
+            // Create an inline keyboard with two buttons
+            const inlineKeyboard = {
+                inline_keyboard: [
+                    [
+                        { text: 'Button 1', callback_data: 'button1' },
+                        { text: 'Button 2', callback_data: 'button2' }
+                    ]
+                ]
+            };
+
+            // Send a message with the inline keyboard to the user
+            bot.sendMessage(chatId, 'Choose a button:', {
+                reply_markup: inlineKeyboard
+            });
+        });
+
+        // Handle button clicks
+        bot.on('callback_query', (query) => {
+            const chatId = query.message.chat.id;
+
+            // Respond to the button click
+            bot.sendMessage(chatId, `You clicked ${query.data}`);
+        });
+    </script>
 </body>
+
 </html>
