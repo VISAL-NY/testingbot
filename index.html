@@ -51,9 +51,13 @@
         //     window.location.href="http://www.w3schools.com";
         //     tele.MainButton.setText("Menu")
         // });
-        tele.offEvent('mainButtonClicked',function(){
-            alert('Hello world');
+        tele.onEvent('mainButtonClicked',function(){
+            if(tele.MainButton.text=="Show1"){
+                alert('Hello');
+            }
+            //window.location.href="http://www.w3schools.com";
         });
+        
 
         
     </script>
