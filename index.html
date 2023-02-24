@@ -47,13 +47,14 @@
         function onClickTextHide(){
             tele.MainButton.hide();
         }
-        tele.MainButton.offClick(()=>{
+        tele.MainButton.onClick(()=>{
             window.location.href="http://www.w3schools.com";
+            tele.MainButton.hide();
             tele.BackButton.show();
         });
 
         tele.BackButton.onClick(()=>{
-            window.location.href="https://vercel.com/visal-99/testingbot";
+            alert("clicked");
         });
     </script>
 </body>
