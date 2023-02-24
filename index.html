@@ -20,7 +20,8 @@
 
 <body>
     <div>
-        <h1 onclick="onClickText()">Hello World</h1>
+        <h1 onclick="onClickTextShow()">Show</h1>
+        <h1 onclick="onClickTextHide()">Hide</h1>
     </div>
     <div>
         <h2>Welcome</h2>
@@ -28,9 +29,12 @@
     </div>
 
     <script>
-        function onClickText(){
-            tele.MainButton.text="Hi";
+        function onClickTextShow(){
+            tele.MainButton.text="Show";
             tele.MainButton.show();
+        }
+        function onClickTextHide(){
+            tele.MainButton.hide();
         }
     </script>
 </body>
