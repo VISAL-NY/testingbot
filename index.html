@@ -53,8 +53,9 @@
                 tele.MainButton.hide();
                 tele.BackButton.show(); 
                 tele.BackButton.isVisible=true;
+                tele.BackButton.onClick(()=>{ alert('Heeeeee') });
         });
-        tele.BackButton.onClick(()=>{ alert('Heeeeee') });
+        
 
         tele.isClosingConfirmationEnabled=true;//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
         tele.headerColor="#F23937";
