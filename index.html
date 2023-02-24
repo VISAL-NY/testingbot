@@ -44,16 +44,11 @@
             tele.MainButton.textColor="#F2F2F6";
             tele.MainButton.color="#F23928";
             window.location.href="home.html";
+            tele.isVisible=true;
         }
         function onClickTextHide(){
             tele.MainButton.hide();
-        }
-
-        
-        if(tele.BackButton.isVisible==true){
-            tele.BackButton.onClick(()=>{ alert('Heeeeee') });
-        }
-       
+        }       
         tele.isClosingConfirmationEnabled=true;//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
         tele.headerColor="#F23937";
     
