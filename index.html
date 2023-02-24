@@ -47,8 +47,9 @@
         function onClickTextHide(){
             tele.MainButton.hide();
         }
-
-        tele.MainButton.onClick('mainmenuClicked',alert('Hello'));
+        tele.MainButton.onClick(()=>{
+            alert("you click me");
+        });
     </script>
 </body>
 
