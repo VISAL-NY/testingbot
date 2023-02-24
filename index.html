@@ -8,11 +8,7 @@
     <title>Document</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        // function setThemeClass() {
-        //     document.documentElement.className = Telegram.WebApp.colorScheme;
-        // }
-        // Telegram.WebApp.onEvent('themeChanged', setThemeClass);
-        // setThemeClass();
+        const tele=window.Telegram.WebApp;
     </script>
     <style>
         body {
@@ -24,45 +20,17 @@
 
 <body>
     <div>
-        <h1>Hello World</h1>
+        <h1 onclick="onClickText()">Hello World</h1>
     </div>
     <div>
         <h2>Welcome</h2>
     </div>
 
     <script>
-        const TelegramBot = require('node-telegram-bot-api');
-
-        // Replace YOUR_BOT_TOKEN with your actual bot token
-        const bot = new TelegramBot('6107592355:AAHu6B-6I7jly4hHEsoGJ25p-cwmPmjdK-U', { polling: true });
-
-        // Handle the /start command
-        bot.onText(/\/start/, (msg) => {
-            const chatId = msg.chat.id;
-
-            // Create an inline keyboard with two buttons
-            const inlineKeyboard = {
-                inline_keyboard: [
-                    [
-                        { text: 'Button 1', callback_data: 'button1' },
-                        { text: 'Button 2', callback_data: 'button2' }
-                    ]
-                ]
-            };
-
-            // Send a message with the inline keyboard to the user
-            bot.sendMessage(chatId, 'Choose a button:', {
-                reply_markup: inlineKeyboard
-            });
-        });
-
-        // Handle button clicks
-        bot.on('callback_query', (query) => {
-            const chatId = query.message.chat.id;
-
-            // Respond to the button click
-            bot.sendMessage(chatId, `You clicked ${query.data}`);
-        });
+        function onClickText(){
+            tele.MainButton.text="Hi";
+            tele.MainButton.show();
+        }
     </script>
 </body>
 
