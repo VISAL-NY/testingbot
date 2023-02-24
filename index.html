@@ -55,16 +55,14 @@
             if(tele.MainButton.text=="Show1"){
                 window.location.href="http://www.w3schools.com";
                 tele.MainButton.setText("Menu");
+                tele.BackButton.show();
             }
         });
-        tele.offEvent('mainButtonClicked',function(){
-            if(tele.MainButton.text=="Menu"){
-                alert("Hey you");
-            }
-        });
-        
 
-        
+        tele.onEvent('backButtonClicked',function(){
+            window.location.href="https://testingbot-psi.vercel.app";
+        });
+
     </script>
 </body>
 
