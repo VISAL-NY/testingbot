@@ -52,9 +52,8 @@
                 window.location.href="http://www.w3schools.com";
                 tele.MainButton.hide();
                 tele.BackButton.show(); 
+                tele.BackButton.isVisible=true;
         });
-
-        tele.BackButton.isVisible=true;
         tele.BackButton.onClick(()=>{ alert('Heeeeee') });
 
         tele.isClosingConfirmationEnabled=true;//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
