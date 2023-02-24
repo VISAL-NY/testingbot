@@ -47,9 +47,11 @@
         function onClickTextHide(){
             tele.MainButton.hide();
         }
-        tele.MainButton.onClick(()=>{
-            window.location.href="http://www.w3schools.com";
-        });
+        // tele.MainButton.onClick(()=>{
+        //     window.location.href="http://www.w3schools.com";
+        //     tele.MainButton.setText("Menu")
+        // });
+        tele.MainButton.offClick(()=>{ alert("hihe") });
 
         
     </script>
