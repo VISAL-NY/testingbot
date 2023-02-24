@@ -48,6 +48,10 @@
             tele.MainButton.hide();
         }
 
+        if(tele.MainButton.text=="Show1"){
+            alert("Show 1");
+        }
+
         tele.onEvent('mainButtonClicked',function(){
                 window.location.href="http://www.w3schools.com";
                 tele.MainButton.setText("Menu");
