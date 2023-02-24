@@ -50,11 +50,11 @@
 
         tele.onEvent('mainButtonClicked',function(){
                 window.location.href="http://www.w3schools.com";
-                tele.MainButton.setText("Menu");
+                tele.MainButton.hide();
                 tele.BackButton.show(); 
         });
 
-        tele.offEvent('backButtonClicked',function(){
+        tele.onEvent('backButtonClicked',function(){
             alert("alert");
         });
 
