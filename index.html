@@ -43,18 +43,19 @@
             tele.MainButton.show();
             tele.MainButton.textColor="#F2F2F6";
             tele.MainButton.color="#F23928";
+            window.location.href="http://www.w3schools.com";
         }
         function onClickTextHide(){
             tele.MainButton.hide();
         }
 
         tele.onEvent('mainButtonClicked',function(){
-                window.location.href="http://www.w3schools.com";
-                tele.MainButton.hide();
-                tele.BackButton.isVisible=true;
-                tele.BackButton.show(); 
+                alert("hooooo"); 
         });
-        tele.BackButton.onClick(()=>{ alert('Heeeeee') });
+        if(tele.BackButton.isVisible==true){
+            tele.BackButton.onClick(()=>{ alert('Heeeeee') });
+        }
+       
         tele.isClosingConfirmationEnabled=true;//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
         tele.headerColor="#F23937";
     
