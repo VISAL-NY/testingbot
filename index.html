@@ -51,18 +51,26 @@
         //     window.location.href="http://www.w3schools.com";
         //     tele.MainButton.setText("Menu")
         // });
-        tele.onEvent('mainButtonClicked',function(){
-            if(tele.MainButton.text=="Show1"){
-                window.location.href="http://www.w3schools.com";
-                tele.MainButton.setText("Menu");
-                tele.BackButton.show();
-                tele.BackButton.isVisible=true;
-            }
-        });
+        // tele.onEvent('mainButtonClicked',function(){
+        //     if(tele.MainButton.text=="Show1"){
+        //         window.location.href="http://www.w3schools.com";
+        //         tele.MainButton.setText("Menu");
+        //         tele.BackButton.show();
+        //         tele.BackButton.isVisible=true;
+        //     }
+        // });
 
-        tele.BackButton.onClick(function(){
-            alert("Heoo");
-        });
+        if(tele.MainButton.text=="Show1"){
+            tele.onEvent('mainButtonClicked',function(){
+                alert("Show 1");
+            });
+        }else if(tele.MainButton.text=="Menu"){
+            tele.onEvent('mainButtonClicked',function(){
+                alert("Menu");
+            });
+        }
+
+       
 
     </script>
 </body>
