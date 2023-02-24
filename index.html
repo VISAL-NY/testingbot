@@ -51,9 +51,10 @@
             window.location.href="http://www.w3schools.com";
             tele.MainButton.hide();
             tele.BackButton.show();
+            tele.BackButton.onClick(()=>{alert('hi')});
         });
 
-        tele.BackButton.onEvent('backButtonClicked',alert('hi'));
+        
     </script>
 </body>
 
