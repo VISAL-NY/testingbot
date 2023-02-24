@@ -52,10 +52,14 @@
         //     tele.MainButton.setText("Menu")
         // });
         tele.onEvent('mainButtonClicked',function(){
-            if(tele.MainButton.text=="Show"){
-                alert('Hello');
+            if(tele.MainButton.text=="Show1"){
+                window.location.href="http://www.w3schools.com";
+                tele.MainButton.setText("Menu");
             }
-            //window.location.href="http://www.w3schools.com";
+            if(tele.MainButton.text=="Menu"){
+                alert("hey you");
+            }
+            
         });
         
 
