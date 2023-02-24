@@ -48,26 +48,22 @@
             tele.MainButton.hide();
         }
 
+        tele.onEvent('mainButtonClicked',function(){
+                window.location.href="http://www.w3schools.com";
+                tele.MainButton.setText("Menu");
+                tele.BackButton.show(); 
+        });
+
         tele.isClosingConfirmationEnabled=true;//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
         //tele.backgroundColor="#F23937";
         tele.headerColor="#F23937";
-
-
-
-
-
-
         // tele.MainButton.onClick(()=>{
         //     window.location.href="http://www.w3schools.com";
         //     tele.MainButton.setText("Menu")
         // });
 
 
-        tele.onEvent('mainButtonClicked',function(){
-                window.location.href="http://www.w3schools.com";
-                tele.MainButton.setText("Menu");
-                tele.BackButton.show(); 
-        });
+       
     </script>
 </body>
 
