@@ -56,11 +56,13 @@
                 window.location.href="http://www.w3schools.com";
                 tele.MainButton.setText("Menu");
                 tele.BackButton.show();
+                tele.BackButton.isVisible=true;
             }
         });
 
         tele.onEvent('backButtonClicked',function(){
-            window.location.href="https://testingbot-psi.vercel.app";
+            //window.location.href="https://testingbot-psi.vercel.app";
+            alert("clicked back");
         });
 
     </script>
