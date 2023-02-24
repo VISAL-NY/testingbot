@@ -15,13 +15,22 @@
             color-scheme: var(--tg-color-scheme);
             color: var(--tg-theme-text-color, rgb(214, 36, 36));
         }
+        div > input{
+            background-color: rgb(37, 241, 224);
+            color: white;
+            padding: 30px;
+            border: none;
+            border-radius: 25%;
+            margin-right: 20px;
+            
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <h1 onclick="onClickTextShow()">Show</h1>
-        <h1 onclick="onClickTextHide()">Hide</h1>
+        <input type="button" onclick="onClickTextShow()" value="Show"/>
+        <input type="button" onclick="onClickTextHide()" value="Hide"/>
     </div>
     <div>
         <h2>Welcome</h2>
