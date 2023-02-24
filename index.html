@@ -57,7 +57,7 @@
                 tele.MainButton.setText("Menu");
             }
         });
-        tele.onEvent('mainButtonClicked',function(){
+        tele.offEvent('mainButtonClicked',function(){
             if(tele.MainButton.text=="Menu"){
                 alert("Hey you");
             }
