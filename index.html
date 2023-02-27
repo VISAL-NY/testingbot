@@ -10,6 +10,7 @@
     <script>
         const tele=window.Telegram.WebApp;
     </script>
+    <script src="bot.js"></script>
     <style>
         body {
             color-scheme: var(--tg-color-scheme);
@@ -60,7 +61,9 @@
                 }
                 
             });
+
         tele.showAlert("Hello 1");
+
         function onClickTextHide(){
             tele.MainButton.hide();
         }       
