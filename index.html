@@ -55,20 +55,13 @@
         }
         tele.MainButton.onClick(()=>{
                 if(tele.MainButton.text=="Pay"){
-                    alert("Hello from here");
-                    tele.MainButton.hide();
+                    tele.close();
                 }
                 
             });
 
         // tele.showAlert("Hello 1");
-
-        tele.showPopup(PopupParams({
-            'title':"My title",
-            'message':"My Message"
-        }),[function(){
-            
-        }]);
+        console.log(tele.initDataUnsafe);
 
         function onClickTextHide(){
             tele.MainButton.hide();
