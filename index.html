@@ -63,10 +63,10 @@
 
         // tele.showAlert("Hello 1");
 
-        tele.PopupParams({
-            'title':"ABC",
-            'message':"This is My Message"
-        });
+        tele.showPopup(PopupParams({
+            'title':"My title",
+            'message':"My Message"
+        }));
 
         function onClickTextHide(){
             tele.MainButton.hide();
