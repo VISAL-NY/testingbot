@@ -39,12 +39,16 @@
 
     <script>
         function onClickTextShow(){
-            tele.MainButton.setText("Show1");
-            tele.MainButton.show();
-            tele.MainButton.textColor="#F2F2F6";
-            tele.MainButton.color="#F23928";
-            window.location.href="home.html";
-            tele.BackButton.isVisible=true;
+            // tele.MainButton.setText("Show1");
+            // tele.MainButton.show();
+            // tele.MainButton.textColor="#F2F2F6";
+            // tele.MainButton.color="#F23928";
+            // window.location.href="home.html";
+            // tele.BackButton.isVisible=true;
+
+            tele.MainButton.setParams(
+                text="Show"
+            )
         }
         function onClickTextHide(){
             tele.MainButton.hide();
