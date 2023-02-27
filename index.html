@@ -47,19 +47,20 @@
             // tele.BackButton.isVisible=true;
 
             tele.MainButton.setParams({
-                "text":"Show",
+                "text":"Pay",
                 "color":"#F23928",
                 "is_visible":true,
 
             });
         }
         tele.MainButton.onClick(()=>{
-                if(tele.MainButton.text=="Show"){
+                if(tele.MainButton.text=="Pay"){
                     alert("Hello from here");
                     tele.MainButton.hide();
                 }
                 
             });
+        tele.isExpanded=true;
         function onClickTextHide(){
             tele.MainButton.hide();
         }       
