@@ -53,16 +53,15 @@
 
             });
         }
-        // tele.MainButton.onClick(()=>{
-        //         if(tele.MainButton.text=="Pay"){
-        //             //tele.MainButton.showProgress(leaveActive=true);
-        //         }
+        tele.MainButton.onClick(()=>{
+                if(tele.MainButton.text=="Pay"){
+                    //tele.MainButton.showProgress(leaveActive=true);
+                    tele.openTelegramLink('https://www.w3schools.com/');
+                }
                 
-        //     });
-        
-        tele.MainButton.offClick(()=>{
-            alert('Hl');
         });
+        
+       
 
         // tele.showAlert("Hello 1");
         //console.log(tele.initDataUnsafe);
