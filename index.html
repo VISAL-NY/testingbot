@@ -55,14 +55,14 @@
         }
         tele.MainButton.onClick(()=>{
                 if(tele.MainButton.text=="Pay"){
-                    
+                    tele.MainButton.showProgress(leaveActive=true);
                 }
                 
             });
 
         // tele.showAlert("Hello 1");
         //console.log(tele.initDataUnsafe);
-        tele.MainButton.showProgress(leaveActive=true);
+       
 
         function onClickTextHide(){
             tele.MainButton.hide();
