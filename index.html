@@ -38,6 +38,14 @@
     </div>
 
     <script>
+        
+        const { Telegraf } = require('telegraf');
+        const BOT_TOKEN="6107592355:AAHu6B-6I7jly4hHEsoGJ25p-cwmPmjdK-U";
+
+        const bot = new Telegraf(process.env.BOT_TOKEN);
+        bot.start((ctx) => ctx.reply('Welcome'));   
+
+
         function onClickTextShow(){
             // tele.MainButton.setText("Show1");
             // tele.MainButton.show();
@@ -49,7 +57,8 @@
             tele.MainButton.setParams({
                 "text":"Show",
                 "color":"#F23928",
-                "is_visible":true
+                "is_visible":true,
+
             });
 
             tele.MainButton.onClick(()=>{
