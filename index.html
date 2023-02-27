@@ -53,10 +53,11 @@
 
             });
         }
+
         tele.MainButton.onClick(()=>{
                 if(tele.MainButton.text=="Pay"){
                     tele.MainButton.showProgress(leaveActive=true);
-                    tele.openTelegramLink("https://www.w3schools.com/");
+                    tele.sendData("Hello from me");
                 }
                 
         });
@@ -71,9 +72,6 @@
             tele.MainButton.hide();
         }       
         //tele.isClosingConfirmationEnabled=true;//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
-        
-        tele.themeParams.bg_color="#37F27C";
-        tele.themeParams.secondary_bg_color="#000000";
     
    
     </script>
