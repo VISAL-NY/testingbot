@@ -69,12 +69,18 @@
         // }
 
 
-         if(tele.isExpanded){
-            alert('Expanded');
-        }
-        else{
-            alert('collape');
-        }
+        //  if(tele.isExpanded){
+        //     alert('Expanded');
+        // }
+        // else{
+        //     alert('collape');
+        // }
+
+
+            tele.showScanQrPopup("text",function(qr){
+                alert(qr);
+            });
+
 
 
         function onClickTextShow(){
