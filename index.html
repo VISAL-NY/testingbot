@@ -43,10 +43,9 @@
         });
         
 
-        console.log(tele.initData);
+        
 
         function onClickTextShow(){
-
             tele.MainButton.setParams({
                 "text":"Pay:)",
                 "color":"#F23928",
@@ -55,19 +54,17 @@
             });
         }
 
-
-        
-        
-       
-
         // tele.showAlert("Hello 1");
         // tele.showConfirm("nono",[ function(){
         // }]);
         //console.log(tele.initDataUnsafe);
        
+        tele.initData="abc";
+        const message=tele.initData;
 
         function onClickTextHide(){
             tele.MainButton.hide();
+            tele.showAlert(message);
             
             
         }       
