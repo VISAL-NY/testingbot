@@ -3,15 +3,15 @@ const bot=new Telegraf("5803362552:AAEqtKjbGNfIailrUXtxrHZXEmj6Yv9mv9I")
 const PROVIDER_TOKEN="284685063:TEST:NmU4NzRhMmUyNGI4";
 
 
-bot.start((ctx)=>{
-    ctx.reply(`Welcome ${ctx.from.first_name + ctx.from.last_name}`,{
-        reply_markup:{
-            keyboard:[
-                [{text:'Order',web_app:{url:'https://testingbot-psi.vercel.app/'}}]
-            ],
-        }
-    })
-})
+// bot.start((ctx)=>{
+//     ctx.reply(`Welcome ${ctx.from.first_name + ctx.from.last_name}`,{
+//         reply_markup:{
+//             keyboard:[
+//                 [{text:'Order',web_app:{url:'https://testingbot-psi.vercel.app/'}}]
+//             ],
+//         }
+//     })
+// })
 
 
 const getInvoice = (id) => {
