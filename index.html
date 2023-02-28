@@ -39,8 +39,18 @@
     </div>
     <script>
         tele.MainButton.onClick(()=>{
-            tele.sendData('hello you');
+            tele.sendData('hello you');// work only keyboard button
         });
+
+
+        tele.showConfirm("You wanna click me?",function(result){
+            if(result=='Ok'){
+                alert("You click Ok");
+            }
+            else{
+                alert('You click cancel');
+            }
+        })
         
 
         
