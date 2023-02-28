@@ -42,15 +42,17 @@
             tele.sendData('hello you');// work only keyboard button
         });
 
-
+        //comfirm dialog
         tele.showConfirm("You wanna click me?",function(result){
             if(result==true){
-                alert("You click Ok");
+                tele.showAlert('you clicked ok');
             }
             else{
-                alert('You click cancel');
+                tele.showAlert('you clicked cancel');
             }
-        })
+        });
+
+
         
 
         
