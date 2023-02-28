@@ -39,7 +39,7 @@
     </div>
     <script>
         tele.MainButton.onClick(()=>{
-            
+            tele.close();
         });
         
 
@@ -47,7 +47,7 @@
 
         function onClickTextShow(){
             tele.MainButton.setParams({
-                "text":"Pay:)",
+                "text":"Close:)",
                 "color":"#F23928",
                 "is_visible":true,
 
@@ -64,6 +64,7 @@
 
         function onClickTextHide(){
             tele.MainButton.hide();
+            alert(message);
             alert(message_one);
             
             
