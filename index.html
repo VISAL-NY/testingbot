@@ -40,17 +40,26 @@
     <script>
         tele.MainButton.onClick(()=>{
             tele.sendData('hello you');// work only keyboard button
+            tele.showConfirm("you wanna close?",function(result){
+            if(result==true){
+                //tele.showAlert('you clicked ok');
+                tele.close();
+            }
+            else{
+                //tele.showAlert('you clicked cancel');
+            }
+        });
         });
 
         //comfirm dialog
-        tele.showConfirm("You wanna click me?",function(result){
-            if(result==true){
-                tele.showAlert('you clicked ok');
-            }
-            else{
-                tele.showAlert('you clicked cancel');
-            }
-        });
+        // tele.showConfirm("You wanna click me?",function(result){
+        //     if(result==true){
+        //         tele.showAlert('you clicked ok');
+        //     }
+        //     else{
+        //         tele.showAlert('you clicked cancel');
+        //     }
+        // });
 
 
         
@@ -90,7 +99,7 @@
         }      
         
 
-        //tele.enableClosingConfirmation();//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
+        tele.enableClosingConfirmation();//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
     
    
     </script>
