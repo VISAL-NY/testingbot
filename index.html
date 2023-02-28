@@ -39,7 +39,7 @@
     </div>
     <script>
         tele.MainButton.onClick(()=>{
-            tele.close();
+            tele.sendData('hello you');
         });
         
 
@@ -77,10 +77,7 @@
             
         }      
         
-        
-        const text="abc";
 
-        tele.showScanQrPopup(tele.ScanQrPopupParams.text,[function(){}])
         //tele.enableClosingConfirmation();//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
     
    
