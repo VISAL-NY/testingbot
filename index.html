@@ -47,19 +47,21 @@
 
 
 
+        function OnMainButtonClick(){
+            // tele.sendData('hello you');// work only keyboard button
+            // tele.showConfirm("you wanna close?", function (result) {
+            //     if (result == true) {
+            //         //tele.showAlert('you clicked ok');
+            //         tele.close();
+            //     }
+            //     else {
+            //         //tele.showAlert('you clicked cancel');
+            //     }
+            // });
+            tele.MainButton.showProgress(true);
+        }
 
-        tele.MainButton.onClick(() => {
-            tele.sendData('hello you');// work only keyboard button
-            tele.showConfirm("you wanna close?", function (result) {
-                if (result == true) {
-                    //tele.showAlert('you clicked ok');
-                    tele.close();
-                }
-                else {
-                    //tele.showAlert('you clicked cancel');
-                }
-            });
-        });
+        tele.MainButton.onClick(OnMainButtonClick);
 
         //comfirm dialog
         // tele.showConfirm("You wanna click me?",function(result){
@@ -108,7 +110,6 @@
         function onClickTextShow() {
             tele.MainButton.setParams({
                 "text": "Close:)",
-                
                 "is_visible": true,
 
             });
