@@ -86,6 +86,8 @@
         
        
 
+
+
         
 
         //comfirm dialog
@@ -106,14 +108,21 @@
         // }
 
 
-         if(tele.isExpanded){
-            alert('Expanded');
-        }
-        else{
-            alert('collape');
-        }
+        //  if(tele.isExpanded){
+        //     alert('Expanded');
+        // }
+        // else{
+        //     alert('collape');
+        // }
 
 
+        tele.showPopup({
+            'title':'Warning',
+            'message':'Are you sure?',
+            'buttons':[{'type':'Ok'},{'type':'Cancel'},{'type':'Close'}]
+        },function(result){
+            
+        })
         function onOpenScan(){
             tele.showScanQrPopup("text",function(qr){
             alert(qr);
