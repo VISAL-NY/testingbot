@@ -119,10 +119,20 @@
         window.Telegram.WebApp.showPopup({
             title:'Warning',
             message:'Are you sure?',
-            buttons:[{'type':'close'},{'type':'ok'}]
+            buttons:[{'type':'close'},{'type':'ok'},{'type':'confirm'}]
         },function(result){
+            if(result=='close'){
+                tele.showAlert('Close');
+            }
+            else if(result=='ok'){
+                tele.showAlert('OK');
+            }
+            else{
+                tele.showAlert('Confirm');
+            }
+        });
 
-        })
+
         function onOpenScan(){
             tele.showScanQrPopup("text",function(qr){
             alert(qr);
