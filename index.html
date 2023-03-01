@@ -117,15 +117,15 @@
 
 
         window.Telegram.WebApp.showPopup({
-            title:'Warning',
-            message:'Are you sure?',
-            buttons:[{'type':'close'},{'type':'ok'}],
+            "title":"Warning",
+            "message":'Are you sure?',
+            "buttons":[{'type':'close'},{'type':'ok'}],
         },function(result){
-            if(result==='close'){
-                tele.showAlert('Close');
+            if(result=='ok'){
+                tele.showAlert('OK');
             }
             else{
-                tele.showAlert('OK');
+                tele.showAlert('Close');
             }
            
         });
