@@ -60,7 +60,7 @@
             //     }
             // });
             tele.MainButton.showProgress(true);
-            isLoading=true;
+            isLoading=!isLoading;
         }
         if(isLoading==false){
             tele.MainButton.onClick(OnMainButtonClick);
