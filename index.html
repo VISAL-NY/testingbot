@@ -47,16 +47,16 @@
 
 
         function OnMainButtonClick(){
-            // tele.sendData('hello you');// work only keyboard button
-            // tele.showConfirm("you wanna close?", function (result) {
-            //     if (result == true) {
-            //         //tele.showAlert('you clicked ok');
-            //         tele.close();
-            //     }
-            //     else {
-            //         //tele.showAlert('you clicked cancel');
-            //     }
-            // });
+            tele.sendData('hello you');// work only keyboard button
+            tele.showConfirm("you wanna close?", function (result) {
+                if (result == true) {
+                    //tele.showAlert('you clicked ok');
+                    tele.close();
+                }
+                else {
+                    //tele.showAlert('you clicked cancel');
+                }
+            });
             
         }
             tele.MainButton.onClick(OnMainButtonClick);
