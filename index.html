@@ -34,6 +34,7 @@
         <input type="button" onclick="onClickTextShow()" value="Show" />
         <input type="button" onclick="onClickTextHide()" value="Hide" />
         <input type="button" onclick="onOpenScan()" value="Open Scan" />
+        <input type="button" onclick="onOpenLink()" value="Open Link" />
     </div>
     <div>
         <h2>Welcome</h2>
@@ -44,6 +45,11 @@
         tele.themeParams.text_color="#21D171";
         window.Telegram.WebApp.themeParams.button_color = '#C5ED24';
 
+
+
+        function onOpenLink(){
+            tele.openLink('https://www.w3schools.com/');
+        }
 
 
         function OnMainButtonClick(){
