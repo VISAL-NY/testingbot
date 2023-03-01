@@ -8,8 +8,9 @@
     <title>Document</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-    <script>
+    <script type="text/javascript">
         const tele = window.Telegram.WebApp;
+        initailize();
     </script>
     <style>
         body {
@@ -42,6 +43,11 @@
         <h2>Hehe</h2>
     </div>
     <script>
+
+        function initailize(){
+            document.getElementById('my-webapp').setAttribute('data-preloader', 'hamburger');
+        }
+
         tele.themeParams.button_text_color="#1B31F8";
         tele.themeParams.text_color="#21D171";
         window.Telegram.WebApp.themeParams.button_color = '#C5ED24';
