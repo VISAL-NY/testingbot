@@ -135,12 +135,7 @@
         //     alert(qr);
         // });
 
-        // window.Telegram.WebApp.showPopup({
-        //     title: "example-popup",
-        //     message: "<p>This is an example popup.</p>",
-        // }, function () {
-        //     alert("Popup closed.");
-        // });
+       
 
 
 
@@ -174,9 +169,16 @@
 
         }
 
+         window.Telegram.WebApp.showPopup({
+            title: "example-popup",
+            message: "<p>This is an example popup.</p>",
+        }, function (result) {
+            alert(` Here is : ${result}`);
+        });
+
 
         //tele.enableClosingConfirmation();//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
-        tele.colorScheme = 'dark';
+        //tele.colorScheme = 'dark';
 
     </script>
 </body>
