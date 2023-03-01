@@ -121,12 +121,7 @@
             "message":'Are you sure?',
             "buttons":[{'type':'close'},{'type':'ok'}],
         },function(result){
-            if(result=='ok'){
-                tele.showAlert('OK');
-            }
-            else{
-                tele.showAlert('Close');
-            }
+            alert(result);
            
         });
 
