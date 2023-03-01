@@ -40,8 +40,6 @@
         <h2>Hehe</h2>
     </div>
     <script>
-
-        const isLoading=false;
         tele.themeParams.button_text_color="#1B31F8";
         tele.themeParams.text_color="#21D171";
         window.Telegram.WebApp.themeParams.button_color = '#C5ED24';
@@ -59,15 +57,11 @@
             //         //tele.showAlert('you clicked cancel');
             //     }
             // });
-            tele.MainButton.showProgress(true);
-            isLoading=!isLoading;
+            
         }
-        if(isLoading==false){
             tele.MainButton.onClick(OnMainButtonClick);
-        }
-        else{
-            tele.MainButton.offClick(OnMainButtonClick);
-        }
+        
+       
 
         
 
