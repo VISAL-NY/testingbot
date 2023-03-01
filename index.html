@@ -43,20 +43,20 @@
         <h2>Hehe</h2>
     </div>
     <script type="text/javascript">
-        function initailize(){
-            document.getElementById('my-webapp').setAttribute('data-preloader', 'hamburger');
-        }
         
 
         tele.themeParams.button_text_color="#1B31F8";
         tele.themeParams.text_color="#21D171";
         window.Telegram.WebApp.themeParams.button_color = '#C5ED24';
 
+        window.Telegram.WebApp.readTextFromClipboard(function (text) {
+            alert(text);
+        });
+
 
 
         function onOpenLink(){
             //tele.openLink('https://www.w3schools.com/');
-
             tele.openTelegramLink('https://t.me/+uYB96aDxuyRkZWFl');
 
         }
