@@ -172,9 +172,9 @@
          window.Telegram.WebApp.showPopup({
             title: "example-popup",
             message: "<p>This is an example popup.</p>",
-        }, function (result) {
+        },[ function (result) {
             alert(` Here is : ${result}`);
-        });
+        }]);
 
 
         //tele.enableClosingConfirmation();//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
