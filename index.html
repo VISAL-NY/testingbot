@@ -159,7 +159,7 @@
 
         const username="";
         const message = tele.initData;
-        const message_one = tele.initDataUnsafe.user.username;
+        const message_one = tele.initDataUnsafe.user;
         const message_two = tele.version;
         const plateform = tele.platform;
 
@@ -167,7 +167,7 @@
         function onClickTextHide() {
             tele.MainButton.hide();
             alert(message);
-            alert(message_one);
+            alert(message_one.last_name);
             alert(message_two);
             alert(plateform);
 
