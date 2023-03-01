@@ -33,6 +33,7 @@
     <div>
         <input type="button" onclick="onClickTextShow()" value="Show" />
         <input type="button" onclick="onClickTextHide()" value="Hide" />
+        <input type="button" onclick="onOpenScan()" value="Open Scan" />
     </div>
     <div>
         <h2>Welcome</h2>
@@ -78,6 +79,11 @@
         // }
 
 
+        function onOpenScan(){
+            tele.showScanQrPopup("text",function(qr){
+            alert(qr);
+        });
+        }
         // tele.showScanQrPopup("text",function(qr){
         //     alert(qr);
         // });
