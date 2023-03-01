@@ -116,16 +116,6 @@
         // }
 
 
-        // window.Telegram.WebApp.showPopup({
-        //     "title":"Warning",
-        //     "message":'Are you sure?',
-        //     "buttons":[{'type':'close'},{'type':'ok'}],
-        // },function(result){
-        //     alert(result);
-           
-        // });
-
-
         function onOpenScan(){
             tele.showScanQrPopup("text",function(qr){
             alert(qr);
@@ -172,7 +162,7 @@
          window.Telegram.WebApp.showPopup({
             title: "example-popup",
             message: "<p>This is an example popup.</p>",
-            buttons:[{'type':'ok'}]
+            buttons:[{type:'ok'}]
         },function (result) {
             alert(` Here is : ${result}`);
         });
