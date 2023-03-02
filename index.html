@@ -55,9 +55,10 @@
         const select=document.getElementById('optionChange');
         select.addEventListener('change',function(){
 
-            //const message=tele.HapticFeedback.notificationOccurred(success);
+            const message=tele.HapticFeedback.notificationOccurred(success);
             alert(select.value);
-        })
+            alert(message);
+        });
         
 
         tele.themeParams.button_text_color="#1B31F8";
