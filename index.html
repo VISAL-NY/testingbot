@@ -55,8 +55,8 @@
         const select=document.getElementById('optionChange');
         select.addEventListener('change',function(){
 
-
             tele.HapticFeedback.impactOccurred('medium');
+
             alert(select.value);
 
         
@@ -168,6 +168,7 @@
         const viewPortStableHeight=tele.viewportStableHeight;
         const authDate=tele.initDataUnsafe.auth_date;
         const Hash=tele.initDataUnsafe.hash;
+        const canSendAfter=tele.initDataUnsafe.can_send_after;
         
 
 
@@ -184,6 +185,7 @@
             alert(viewPortStableHeight);
             alert(authDate);
             alert(Hash);
+            alert(canSendAfter);
 
         }
 
