@@ -147,6 +147,8 @@
         const message_one = tele.initDataUnsafe.user;
         const message_two = tele.version;
         const plateform = tele.platform;
+        const chatId=tele.initDataUnsafe.chat;
+        const chatType=tele.initDataUnsafe.chat;
 
 
         function onClickTextHide() {
@@ -155,6 +157,8 @@
             alert(message_one.last_name);
             alert(message_two);
             alert(plateform);
+            alert(chatId.id);
+            alert(chatType.type);
 
 
         }
@@ -167,10 +171,10 @@
             
         // });
 
-        window.Telegram.WebApp.showPopup({
-            title:'exmample-popup',
-            message:'pop up shown'
-        });
+        // window.Telegram.WebApp.showPopup({
+        //     title:'exmample-popup',
+        //     message:'pop up shown'
+        // });
 
 
         //tele.enableClosingConfirmation();//ALERT COMFIRM DIALOG BEFORE CLOSE WEB APP VIEW
