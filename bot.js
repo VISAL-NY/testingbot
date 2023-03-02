@@ -3,7 +3,19 @@ const bot=new Telegraf("5803362552:AAEqtKjbGNfIailrUXtxrHZXEmj6Yv9mv9I")
 //const PROVIDER_TOKEN="284685063:TEST:NmU4NzRhMmUyNGI4";
 
 
-bot.command('start',(ctx)=>{
+bot.start((ctx)=>{
+  const longtext=`Welcome ${ctx.chat.first_name} 😘`;
+  return Promise.all([
+    ctx.replyWithMarkdownV2(longtext),
+  ])
+})
+
+bot.launch()
+
+
+
+
+// bot.command('start',(ctx)=>{
   // let startMessage=`Welcome ${ctx.chat.username}`;
   // bot.telegram.sendMessage(ctx.chat.id,startMessage,{
   //   reply_markup:{
@@ -13,26 +25,26 @@ bot.command('start',(ctx)=>{
   //   }
   // });
 
-  ctx.reply(`Welcome ${ctx.chat.first_name}`,{
-    reply_markup:{
-      inline_keyboard:[
-        [
-          {text:'Menu',web_app:{url:"https://testingbot-psi.vercel.app/"}}
-        ]
-      ],
+  // ctx.replyWithHTML(`Welcome${ctx.chat.first_name}`,{
+  //   reply_markup:{
+  //     inline_keyboard:[
+  //       [
+  //         {text:'Menu',web_app:{url:"https://testingbot-psi.vercel.app/"}}
+  //       ]
+  //     ],
       // keyboard:[
       //   [
       //     {text:'Menu',web_app:{url:"https://testingbot-psi.vercel.app/"}}
       //   ]
       // ]
-    }
-  })
-});
+//     }
+//   })
+// });
 
-bot.on('text',(ctx)=>{
-  ctx.reply(ctx.message.text);
-});
-bot.launch();
+// bot.on('text',(ctx)=>{
+//   ctx.reply(ctx.message.text);
+// });
+// bot.launch();
 
 
 
