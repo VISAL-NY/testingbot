@@ -147,8 +147,9 @@
         const message_one = tele.initDataUnsafe.user;
         const message_two = tele.version;
         const plateform = tele.platform;
-        const chatId=tele.initDataUnsafe.chat;
-        const chatType=tele.initDataUnsafe.chat;
+        // const chatId=tele.initDataUnsafe.chat;
+        // const chatType=tele.initDataUnsafe.chat;
+        const isPremium=tele.initDataUnsafe.user;
 
 
         function onClickTextHide() {
@@ -157,8 +158,9 @@
             alert(message_one.username);
             alert(message_two);
             alert(plateform);
-            alert(chatId.id);
-            alert(chatType.type);
+            // alert(chatId.id);
+            // alert(chatType.type);
+            alert(isPremium.is_premium);
 
 
         }
