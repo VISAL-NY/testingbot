@@ -1,33 +1,43 @@
-const { Telegraf, Markup } = require('telegraf')
+const { Telegraf } = require('telegraf')
 const bot=new Telegraf("5803362552:AAEqtKjbGNfIailrUXtxrHZXEmj6Yv9mv9I")
-const PROVIDER_TOKEN="284685063:TEST:NmU4NzRhMmUyNGI4";
+//const PROVIDER_TOKEN="284685063:TEST:NmU4NzRhMmUyNGI4";
 
-bot.on('inline_query', (ctx) => {
-  const inlineKeyboard = {
-    inline_keyboard: [
-      [
-        {
-          text: 'Launch Web App',
-          url: 'https://testingbot-psi.vercel.app/'
-        }
-      ]
-    ]
-  };
 
-  ctx.answerInlineQuery(
-    console.log('hhhe')
-    [
-    {
-      type: 'article',
-      id: '1',
-      title: 'Launch Web App',
-      input_message_content: { message_text: 'Click the button to launch the web app!' },
-      reply_markup: inlineKeyboard
+bot.command('start',(ctx)=>{
+  // let startMessage=`Welcome ${ctx.chat.username}`;
+  // bot.telegram.sendMessage(ctx.chat.id,startMessage,{
+  //   reply_markup:{
+  //     inline_keyboard:[
+  //       [{text:'menu',web_app:{url:'https://testingbot-psi.vercel.app/'}}]
+  //     ]
+  //   }
+  // });
+
+  ctx.reply(`Welcome ${ctx.chat.first_name}`,{
+    reply_markup:{
+      inline_keyboard:[
+        [
+          {text:'Menu',web_app:{url:"https://testingbot-psi.vercel.app/"}}
+        ]
+      ],
+      // keyboard:[
+      //   [
+      //     {text:'Menu',web_app:{url:"https://testingbot-psi.vercel.app/"}}
+      //   ]
+      // ]
     }
-  ]);
+  })
 });
 
+bot.on('text',(ctx)=>{
+  ctx.reply(ctx.message.text);
+});
 bot.launch();
+
+
+
+
+
 
 
 
