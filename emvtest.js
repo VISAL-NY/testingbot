@@ -3,6 +3,7 @@
 //const result=emvqrcode.decode(example);
 
 //console.log(result);
+const emvqrcode =require('emvqr');
 
 function onOpenScan(){
     tele.showScanQrPopup("text",function(qrcode){
