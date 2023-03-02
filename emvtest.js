@@ -1,5 +1,8 @@
+const emvqr=require('emvqr')
+
 function onOpenScan(){
     tele.showScanQrPopup("text",function(qr){
-    alert(`this is raw ${qr}`);
+    const result=emvqr.decode(qr);
+    alert(result);
 });
 }

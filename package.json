@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "dotenv": "^16.0.3",
+    "emvqr": "^0.0.5",
     "telegraf": "^4.11.2"
   },
   "devDependencies": {
