@@ -54,7 +54,8 @@
 
         const select=document.getElementById('optionChange');
         select.addEventListener('change',function(){
-            tele.HapticFeedback.notificationOccurred(success);
+            const message=tele.HapticFeedback.notificationOccurred(success);
+            alert(message);
         })
         
 
