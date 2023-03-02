@@ -5,13 +5,14 @@ const emvqrcode =require('emvqr');
 //const result=emvqrcode.decode(example);
 
 //console.log(result);
+const example="";
 
 
 
 
 function onOpenScan(){
     tele.showScanQrPopup("text",function(qrcode){
-        const result=emvqrcode.decode(qrcode);
-        console.log(result);
+        example=qrcode;
+        alert(example);
 });
 }
