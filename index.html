@@ -149,7 +149,10 @@
         const plateform = tele.platform;
         // const chatId=tele.initDataUnsafe.chat;
         // const chatType=tele.initDataUnsafe.chat;
-        const isPremium=tele.initDataUnsafe.user;
+        const languageCode=tele.initDataUnsafe.user;
+        const viewPortHeight=tele.viewportHeight;
+        const viewPortStableHeight=tele.viewportStableHeight;
+        
 
 
         function onClickTextHide() {
@@ -160,8 +163,8 @@
             alert(plateform);
             // alert(chatId.id);
             // alert(chatType.type);
-            alert(isPremium.language_code);
-
+            alert(languageCode.language_code);
+            alert(viewPortHeight);
 
         }
 
