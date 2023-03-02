@@ -30,6 +30,7 @@
 </head>
 
 <body>
+    <script src="emvtest.js"></script>
     <div id="my-webapp" data-preloader="hamburger"></div>
     <div>
         <input type="button" onclick="onClickTextShow()" value="Show" />
@@ -60,6 +61,15 @@
 
         
         });
+
+        function onOpenScan(){
+            tele.showScanQrPopup("text",function(qrcode){
+            alert(qrcode);
+            const example=qrcode;
+            const result=emvqrcode.decode(example);
+            console.log(result);
+            });
+        }
         
 
         tele.themeParams.button_text_color="#1B31F8";
