@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,8 +54,6 @@
         const select=document.getElementById('optionChange');
         select.addEventListener('change',function(){
 
-            tele.HapticFeedback.impactOccurred('medium');
-
             alert(select.value);
 
         
@@ -97,16 +94,18 @@
 
 
         function OnMainButtonClick(){
-            tele.sendData('hello you');// work only keyboard button
-            tele.showConfirm("you wanna close?", function (result) {
-                if (result == true) {
-                    //tele.showAlert('you clicked ok');
-                    tele.close();
-                }
-                else {
-                    //tele.showAlert('you clicked cancel');
-                }
-            });
+            // tele.sendData('hello you');// work only keyboard button
+            // tele.showConfirm("you wanna close?", function (result) {
+            //     if (result == true) {
+            //         //tele.showAlert('you clicked ok');
+            //         tele.close();
+            //     }
+            //     else {
+            //         //tele.showAlert('you clicked cancel');
+            //     }
+            // });
+
+            tele.openLink("https://testingbot-psi.vercel.app/");
             
         }
             tele.MainButton.onClick(OnMainButtonClick);
@@ -154,7 +153,7 @@
 
         function onClickTextShow() {
             tele.MainButton.setParams({
-                "text": "Close:)",
+                "text": "Open New Link",
                 "is_visible": true,
 
             });
